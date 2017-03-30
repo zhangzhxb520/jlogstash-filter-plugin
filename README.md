@@ -60,6 +60,7 @@
   ```
 
 # Translate:
+使用指定的字典，对event中的指定字段值进行翻译。目前定义字典支持配置文件中定义、本地文件定义、数据库表定义。
 
 ## 概要
 | Setting|     Input Type|  Required| Default Value|
@@ -160,6 +161,7 @@ filters:
 
 
 # Aggregate:
+Aggregate插件用于将输入的多个event聚合为一个event。
 
 ## 概要
 | Setting|     Input Type|  Required| Default Value|
