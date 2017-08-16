@@ -21,6 +21,7 @@ public class Image2PDFTest {
 
     @org.junit.Test
     public void filter() throws Exception {
+        long startTime = System.currentTimeMillis();
         Field sourceFiled = Image2PDF.class.getDeclaredField("source");
         sourceFiled.setAccessible(true);
         sourceFiled.set(null, "images");
@@ -50,6 +51,9 @@ public class Image2PDFTest {
         OutputStream outputStream = new FileOutputStream(path + "/images.pdf");
         IOUtils.copy(inputStream, outputStream, new byte[2048]);
         IOUtils.closeQuietly(outputStream);
+
+        long end = System.currentTimeMillis();
+        System.out.println("耗时：" + (end - startTime) + "毫秒");
     }
 
     private byte[] readImage(String path) {
