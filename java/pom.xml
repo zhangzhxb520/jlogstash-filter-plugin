@@ -8,6 +8,12 @@
     <artifactId>java</artifactId>
     <version>1.0.0</version>
 
+    <parent>
+        <groupId>com.dtstack.jlogstash</groupId>
+        <artifactId>filter</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
     <build>
         <plugins>
             <plugin>
